@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+
+  <!-- font -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="form">
+      <div class="first-page" id="firstPage">
+        <div class="flex-row---gt1000px">
+          <div class="upper-part">
+            <div class="dark-section">
+              <img class="dark-card" src="images/bg-card-back.png" alt="a picture showing back of a credit card">
+              <div class="cvc-num-sp">000</div>
+            </div>
+
+            <div class="sec-card">
+              <img src="images/card-logo.svg" alt="an official logo of card's company">
+              <div class="long-num">0000 0000 0000 0000</div>
+              <div class="flex-row">
+                <div class="name cptlzd">Jane Appleseed</div>
+                <div class="date">00/00</div>
+              </div>
+            </div>
+          </div>
+          <div class="lower-part">
+            <label for="cardHolderName">Cardholder Name</label>
+            <input class="long-input input" type="text" id="cardHolderName" placeholder="e.g. Jane Appleseed">
+            <div class="error-text hidden" id="cardholderNameErrorText"></div>
+            <label for="cardNumber">Card Number</label>
+            <input class="long-input input" type="text" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000">
+            <div class="error-text hidden" id="cardNoErrorText"></div>
+            <div class="flex-row">
+              <label class="date-label" for="dateInputMonth">Exp. Date (MM/YY)</label>
+              <label class="cvc-label" for="inputCvc">CVC</label>
+            </div>
+            <div class="flex-row">
+              <input class="short-input input" type="number" placeholder="MM" id="dateInputMonth">
+              <input class="short-input input" type="number" placeholder="YY" id="dateInputYear">
+              <input class="mid-input input" type="number" id="inputCvc" placeholder="e.g.123">
+            </div>
+            <div class="flex-row">
+              <div class="error-text month-err-tx hidden" id="monthErrorText"></div>
+              <div class="error-text year-err-tx hidden" id="yearErrorText"></div>
+              <div class="error-text cvc-err-txt hidden" id="cvcErrorText"></div>
+            </div>
+            <button id="confirmBtn">Confirm</button>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!--success state page 2 starts here-->
+
+
+      <div class="second-page hidden" id="secondPage">
+        <div class="flex-row---gt1000px">
+          <div class="upper-part">
+            <div class="dark-section">
+
+              <!-- card-back -->
+
+              <img class="dark-card" src="images/bg-card-back.png" alt="a picture showing back of a credit card">
+              <div class="cvc-num-sp" id="givenCvcNumber"></div>
+            </div>
+
+            <!-- card-front -->
+
+            <div class="sec-card">
+              <img src="images/card-logo.svg" alt="an official logo of card's company">
+              <div id="givenCardNumber" class="long-num"></div>
+              <div class="flex-row">
+                <div id="givenName" class="name cptlzd"></div>
+                <div id="givenDate" class="date cptlzd"></div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="lower-part">
+            <img src="images/icon-complete.svg" alt="an icon showing tick mark">
+            <h1 class="cptlzd">Thank you!</h1>
+            <p>We've added your card details</p>
+            <button id="continueBtn">Continue</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- attribution -->
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Muhammad Aamir Masood</a>.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
